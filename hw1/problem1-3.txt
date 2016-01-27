@@ -1,0 +1,23 @@
+Problem 1
+(a)
+1 4
+
+(b)
+2 3 4 5
+
+(c)
+2
+
+(d)
+2
+
+Problem 2
+(a)
+3
+
+(b)
+git add hw1q2b.cpp
+git log -n 3
+
+(c)
+It can protect my code and save all my changes in case my computer crashes.
