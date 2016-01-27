@@ -11,7 +11,16 @@ int main(int argc, char* argv[])
     return 1;
   }
   ifstream input(argv[1]);
+  if(input.fail()){
+  	cerr << "Please provide a corrct input file." << endl;
+    return 1;
+  }
   ofstream output(argv[2]);
+  if(output.fail()){
+  	cerr << "Please provide a output file." << endl;
+    return 1;
+  }
+
 
   int floors;
   int *floorsizes;
