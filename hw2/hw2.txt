@@ -1,0 +1,49 @@
+1.
+(a)
+Unmodified
+
+(b)
+Modified README.md
+Untracked fun_problem.txt
+
+(c)
+Staged README.md
+Staged fun_problem.txt
+
+(d)
+Modified README.md
+Modified fun_problem.txt
+
+(e)
+Staged README.md
+Unmodified fun_problem.txt
+because git checkout dicards all the changes before so the fun_problem.txt is empty now.
+
+(f)
+Modified README.md
+
+Problem 3
+(a)
+The outer for loop will run n times. Since we want to treat is as the worst case to count the big O notation so we assume we the if statement is always true. The inner for loop will run log(n) times and content inside the inner for loop takes O(1) to execute. Therefore, we just multiply n, log(n) and constant time to get O(nlog(n)) as the runtime.
+
+(b)
+we can see that the runtime is n+n/2+n/3+ ... +1 = n(1+1/2+1/3+...+1/n)     1+1/2+1/3+...+1/n = log(n) Therefore, the total runtime is O(n(log(n)))
+
+(c)
+a[i] = sqrt(i)   takes O(n) to run. The inner for loop will run n/10 times, but everytime it runs, the for loop size gets increased. 10 + 20 + 30 + ... + n (total n/10 items) and the summation is n(n+10)/20 which can be written as O(n^2). Therefore, O(n^2) + O(n) = O(n^2)
+
+(d)
+a[i] = sqrt(i)   takes O(n) to run. The inner for loop will run log(n) times, but everytime it runs, the for loop size gets doubled. 10 + 20 + 40 + ... + n (total log(n) times). The summation is 10(n-1) after simplification. Therefore, the total runtime is O(n) + O(10(n-1)) = O(n)
+
+Problem 4
+(a)List
+Because we want the order in which each president served and president names can be repeated, we use list to represent the sequence of presidence. Each element in the list will be each president. Both linked list and array can accomplish that.
+(b)Map
+Each area associate with a unique zipcode which is very similar to maps. A map (associative array) is a collection of unique keys(zipcode) and values(population). Additionally, we can do lookup of a population if we the zipcode associated with is given.
+(c)Set
+Every student cannot be repeated which is one of the features of sets. Also, the order does not matter as long as all the students are in the same set, which is the class 170.
+(d)Map
+Each student ID is unique which satisfy the criteria of maps. Each assignment number is unique as well which satisfy the criteria of maps. We can use the nested Maps, because we can access each student by ID and then access the grade on that specific student by the assignment number.
+
+Problem 5
+This program keeps calling funcA until it gets the last node and return the pointer to last node. Next, funcB reverses the direction from one parameter to the other. Then, going back to funcA, "in->next = NULL;" is to cut off the loop and make it into a chain with the reversed order. After calling funcB many times, the final output is just a one-way reversed link list compared to the original one.
